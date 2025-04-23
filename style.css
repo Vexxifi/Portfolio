@@ -1,0 +1,188 @@
+:root {
+  --color-bg: #FAF9F6;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+  
+}
+
+/* Basic page style resets */
+  * {
+    box-sizing: border-box;
+  }
+  [hidden] {
+    display: none !important;
+  }
+
+/* Import fonts */
+  /* @font-face {
+    font-family: Palmore;
+    src: url("https://cdn.glitch.global/3845821b-eb53-441c-8813-9510f3d18ea3/Palmore.otf?v=1725475477089")
+      format("opentype");
+  } */ 
+  @font-face {
+    font-family: HK Grotesk;
+    src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+      format("opentype");
+  }
+  @font-face {
+    font-family: HK Grotesk;
+    font-weight: bold;
+    src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+      format("opentype");
+  }
+
+  @font-face {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+  }
+
+  @font-face {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+  }
+
+  @font-face {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+  }
+
+
+
+
+
+/* Navigation grid */
+
+    /* The side navigation menu */
+    .sidenav {
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Stay on top */
+      top: 60px; /* Stay at the top */
+      left: 0;
+      background-color: #FAF9F6 | Transparent; /* Black*/
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover, .offcanvas a:focus{
+      color: #f1f1f1;
+      text-decoration-line: underline;
+      transition: fade;
+    }
+
+    .navicon{
+      position: absolute;
+      left: 32234px;
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    #main {
+      transition: margin-left .5s;
+      padding: 20px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto 0;
+    padding: 1rem 0 0.75rem 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .footer a:hover {
+    background: var(--color-primary);
+  }
+
+  .footer .links {
+    padding: 0.5rem 1rem 1.5rem;
+    white-space: nowrap;
+  }
+
+  .divider {
+    padding: 0 1rem;
+  }
+
+body {
+  font-family: HK Grotesk, sans-serif;
+  background-image: url("#");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-color: var(--color-bg);*/
+}
+
+/* Page structure */
+
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65vw;
+  margin: auto;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #2800FF;
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-weight: bold;
+  font-size: auto;
+  line-height: 105%;
+  margin: 0;
+}
+
+.pagetitle {
+  font-weight: bold;
+  font-size: 50px;
+}
+/* Subheading */
+h2 {
+  color: #2800FF;
+}
+
+.moved-element {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
