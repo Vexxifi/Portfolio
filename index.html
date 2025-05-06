@@ -15,7 +15,6 @@
     <script src="/javascript/script.js" defer></script>
 
     <!-- SEO Optimization -->
-    <!--
         <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
         <meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
         <meta name="robots" content="index,follow" />
@@ -25,7 +24,6 @@
         <meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
         <meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
         <meta name="twitter:card" content="summary" />
-      -->
   </head>
 
   <body>
@@ -96,6 +94,26 @@
         </div>
       </footer>
     </div>
+
+    <!--Navigation Menu -->
+    <header>
+        
+        <!-- Button to Open and Close Sidenavigation -->
+        <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">
+          <img id="navicon" src="https://cdn.glitch.global/3845821b-eb53-441c-8813-9510f3d18ea3/Asset%202.png?v=1733868166941" width="25px" length="25px">
+        </span>
+        
+        <!-- Sidenavigation -->
+        <div id="mySidenav" class="sidenav">
+            <a href="index.html" class="site-title">Home</a>
+            <a href="about.html" class="navbar">About</a>
+            <a href="works.html" class="navbar">Works</a>
+        </div>      
+
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <!--<div id="main"></div>-->
+
+    </header>
 
    
   </body>
