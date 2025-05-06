@@ -18,6 +18,14 @@
     display: none !important;
   }
 
+/* HTML */
+html 
+{
+  background: #100c08;
+  color: #fff5ee;
+}
+
+
 /* Import fonts */
   /* @font-face {
     font-family: Palmore;
@@ -63,67 +71,73 @@
 
 /* Navigation grid */
 
-    /* The side navigation menu */
-    .sidenav {
-      height: 100%; /* 100% Full-height */
-      width: 0; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Stay on top */
-      top: 60px; /* Stay at the top */
-      left: 0;
-      background-color: #FAF9F6 | Transparent; /* Black*/
-      overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 60px; /* Place content 60px from the top */
-      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    }
+/* Side Navigation */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000; /* Higher than the modal */
+    top: 0;
+    left: 0;
+    background-color: #f7ecac;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
 
-    /* The navigation menu links */
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #100c08;
+    display: block;
+    transition: 0.3s;
+  }
 
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover, .offcanvas a:focus{
-      color: #f1f1f1;
-      text-decoration-line: underline;
-      transition: fade;
-    }
+  .sidenav a:hover {
+    color: #7b1103;
+  }
 
-    .navicon{
-      position: absolute;
-      left: 32234px;
-    }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 
-    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    #main {
-      transition: margin-left .5s;
-      padding: 20px;
-    }
+/* Hamburger Button */
+.nav-tab {
+  position: fixed;
+  top: 20px; /* Move closer to the top */
+  left: 0;
+  background-color: #f7ecac;
+  color: #540d07;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1001; /* Higher than the sidenav */
+  border-radius: 0 5px 5px 0;
+  font-size: 20px;
+  transition: left 0.5s; /* Smoothly move the tab */
+}
 
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
+/* Main content */
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
 
 
 
   .footer {
     display: flex;
-    justify-content: space-between;
-    margin: 1rem auto 0;
-    padding: 1rem 0 0.75rem 0;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
   }
 
   .footer a:hover {
-    background: var(--color-primary);
+    /*background: var(--color-primary);*/
   }
 
   .footer .links {
@@ -133,6 +147,25 @@
 
   .divider {
     padding: 0 1rem;
+  }
+
+  .footer-divider {
+    border: none;
+    border-top: 2px solid #f7ecac; /* Light divider color */
+    margin: 2rem 0;
+  }
+
+  .footer-icon {
+    color: #f7ecac; /* Icon color */
+    fill: #f7ecac;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    transition: fill 0.3s ease;
+  }
+
+  .footer-icon:hover {
+    color: #7b1103; /* Hover color */
+    fill: #7b1103;
   }
 
 body {
@@ -161,6 +194,27 @@ body {
   margin: auto;
 }
 
+.full-bleed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #100c08; /* Dark background */
+  color: #f7ecac; /* Light text */
+}
+
+.full-bleed-title {
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 15vw; /* Responsive font size */
+  font-weight: bold;
+  text-align: left;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+}
+
 /* Very light scaling for our illustration */
 .title {
   color: #2800FF;
@@ -186,3 +240,113 @@ h2 {
   top: 50px;
   left: 100px;
 }
+
+.card-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.GalleryImg {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.card-overlay:hover .GalleryImg {
+  transform: scale(1.1);
+  filter: brightness(50%);
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card-overlay:hover .overlay-content {
+  opacity: 1;
+}
+
+.overlay-content h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.overlay-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  display: flex;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 900px;
+  height: 70%;
+}
+
+.full-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.project-description {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.project-description h3 {
+  margin-top: 0;
+}
+
+.project-description p {
+  line-height: 1.5;
+}
+
+
+    /* Ensure the sidenav and nav-tab are above the modal */
+    .sidenav {
+      z-index: 1000; /* Higher than the modal */
+    }
+
+    .nav-tab {
+      z-index: 1001; /* Higher than the sidenav */
+    }
+
+    .modal {
+      z-index: 999; /* Lower than the sidenav and nav-tab */
+    }
+
