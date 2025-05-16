@@ -350,3 +350,17 @@ h2 {
       z-index: 999; /* Lower than the sidenav and nav-tab */
     }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 24px; /* Add space above the logo */
+
+}
+.logo svg {
+  width: 35px;
+  height: auto;
+  display: block;
+}
